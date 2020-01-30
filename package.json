@@ -1,0 +1,51 @@
+{
+  "name": "reason-anyhooks-demo",
+  "version": "0.1.0",
+  "description": "reason-anyhooks-demo",
+  "homepage": "http://idkjs.github.io/reason-anyhooks-demo",
+  "author": "Alain Armand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idkjs/reason-anyhooks-demo/issues"
+  },
+  "scripts": {
+    "start": "concurrently \"npm:watch\" \"npm:webpack\" \"npm:server\"",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w -ws _",
+    "clean": "bsb -clean-world",
+    "webpack": "webpack -w",
+    "server": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:production": "NODE_ENV=production webpack",
+    "format": "refmt src/*.re"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idkjs/reason-anyhooks-demo.git"
+  },
+  "keywords": [
+    "reason",
+    "hooks",
+    "react-hooks",
+    "reason-hooks",
+    "reason-react",
+    "utils"
+  ],
+  "devDependencies": {
+    "bs-platform": "^7.0.1",
+    "concurrently": "5.1.0",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "any-hooks": "4.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "reason-anyhooks": "github:idkjs/reason-anyhooks",
+    "reason-react": "0.7.0"
+  }
+}
